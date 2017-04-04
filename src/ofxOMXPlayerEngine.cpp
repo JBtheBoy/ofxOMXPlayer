@@ -459,6 +459,24 @@ int ofxOMXPlayerEngine::increaseSpeed()
     return speedMultiplier;
 }
 
+int ofxOMXPlayerEngine::decreaseSpeed()
+{
+
+	lock();
+	doSeek = true;
+
+	if (speedMultiplier - 1 >= 0)
+	{
+		speedMultiplier--;
+		int newSpeed = normalPlaySpeed*speedMultiplier;
+
+		clock->setSpeed(newSpeed);
+		omxReader.setSpeed(newSpeed);
+	}
+	unlock();
+	return speedMultiplier;
+}
+
 void ofxOMXPlayerEngine::rewind()
 {
     if(speedMultiplier-1 == 0)

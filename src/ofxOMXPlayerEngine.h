@@ -71,6 +71,7 @@ public:
     
     
     int increaseSpeed();
+	int decreaseSpeed();
     void rewind();
     void setNormalSpeed();
     int normalPlaySpeed;
