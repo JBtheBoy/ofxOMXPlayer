@@ -46,7 +46,9 @@ public:
     void        stepFrameForward();
     void        stepFrame(int);
     void        scrubForward(int step=1);
+	void        decreaseSpeed();
     void        increaseSpeed();
+	void        setSpeed(float);
     int         getSpeedMultiplier();
     void        setNormalSpeed();
     void        rewind();

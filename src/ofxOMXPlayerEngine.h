@@ -72,10 +72,11 @@ public:
     
     int increaseSpeed();
 	int decreaseSpeed();
+	int setSpeed(float);
     void rewind();
     void setNormalSpeed();
     int normalPlaySpeed;
-    int speedMultiplier;
+    float speedMultiplier;
     
     bool doSeek;
     

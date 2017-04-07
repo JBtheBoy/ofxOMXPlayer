@@ -373,7 +373,9 @@ bool OMXClock::setSpeed(int speed, bool doResume /* = false */)
     }
 
     step(0);
-    scaleType.xScale = (speed << 16) / DVD_PLAYSPEED_NORMAL;  
+    scaleType.xScale = (speed << 16) / DVD_PLAYSPEED_NORMAL;
+
+
 
     error = clockComponent.setConfig(OMX_IndexConfigTimeScale, &scaleType);
     OMX_TRACE(error);

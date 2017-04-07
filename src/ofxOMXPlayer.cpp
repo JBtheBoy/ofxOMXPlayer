@@ -477,12 +477,28 @@ int ofxOMXPlayer::getSpeedMultiplier()
     return speedMultiplier;
 }
 
+void ofxOMXPlayer::decreaseSpeed()
+{
+	if (engine)
+	{
+		speedMultiplier = engine->decreaseSpeed();
+	}
+}
+
 void ofxOMXPlayer::increaseSpeed()
 {
     if(engine)
     {
         speedMultiplier = engine->increaseSpeed();
     }
+}
+
+void ofxOMXPlayer::setSpeed(float speed)
+{
+	if(engine)
+	{
+		speedMultiplier = engine->setSpeed(speed);
+	}
 }
 
 void ofxOMXPlayer::setNormalSpeed()
