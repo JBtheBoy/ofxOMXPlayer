@@ -470,7 +470,7 @@ int ofxOMXPlayerEngine::setSpeed(float speed)
 
 void ofxOMXPlayerEngine::rewind()
 {
-	if(speedMultiplier >= 0.0)
+	if(speedMultiplier - 1 <= 0.0)
     {
         setSpeed(-1.0);
     }
@@ -479,6 +479,7 @@ void ofxOMXPlayerEngine::rewind()
         decreaseSpeed();
     }
 }
+
 
 void ofxOMXPlayerEngine::scrubForward(int step)
 {
